@@ -10,29 +10,28 @@ import pickle
 import h5py
 import numpy as np
 
-repro = False
 num_tags = 3896
 num_words = 212000
 index_from_text = 3
 index_from_tag = 2
-seq_length = 30
+seq_length = 30    # max length of text sequence
 batch_size = 512
 embedding_size = 300
 attention_size = 200
 dim_k = 100
 num_region = 7*7
 drop_rate = 0.75
-maxTagLen = 48
+maxTagLen = 48    # max length of tag sequence
 num_epoch = 30
-numHist = 2
-numTestInst = 64264
+numHist = 2    # historical posts number for each user
+numTestInst = 64264    # if you're going to use predict_generator, modify this parameter as your testSet size.
 testBatchSize = 40
 
 print("Experiment parameters:")
 print("embedding_size: %d, num_epoch: %d" % (embedding_size, num_epoch))
 
 # load data
-h5 = h5py.File("/home/zsw/Instagram/insta_imgFeat.h5", "r")
+h5 = h5py.File("insta_imgFeat.h5", "r")
 text_train, tag_train, ids_train, user_train = pickle.load(open("trainSet_20_%d.pkl"%numHist, "rb"))
 user_post_samples = pickle.load(open("user_post_samples_%d.pkl"%numHist, "rb"))
 text_train = zero_padding(text_train, seq_length)
@@ -48,6 +47,7 @@ for index in range(len(tag_test)-(numTestInst % testBatchSize)):
 test_tag = np.array(tmp_test_tag)
 
 
+# Loading all data into memory always causes OOM error. So we suggest keeping these two batchMakers.
 def batchMaker(texts, tags, ids, users):
     shape = texts.shape[0]
     text_copy = texts.copy()
