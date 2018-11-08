@@ -12,7 +12,7 @@ In this repository, we provide code implemented with Python Keras APIs
 and our dataset crawled from Instagram. These materials are also used in experiments
 reported in our AAAI paper.
 
-Please cite our work if you're going to use our dataset:
+**Please cite our work if you're going to use our dataset:**
 [bib here]
 
 ### Details
