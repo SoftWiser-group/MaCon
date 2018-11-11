@@ -15,7 +15,7 @@ Similar with vocabulary.
 # InstagramImage.zip
 It includes all images responding to the posts in the dataset. Every jpg file is named with the post_id of corresponding post. 
 This file is about 40G and we put it on Baidu Cloud disk. 
-You can download it here: 链接：https://pan.baidu.com/s/1Wh3gVwGPYWMqVMEWJEaPhw  retrieve code：rj5v 
+You can download it here: https://pan.baidu.com/s/1Wh3gVwGPYWMqVMEWJEaPhw  retrieve code：rj5v 
 
 
 # dataSplit.py
