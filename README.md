@@ -5,12 +5,9 @@ Implementation and dataset of AAAI 2019 paper:
 
 ### Intro
 
-MaCon is a deep neural network model used to recommend hashtags for posts in
-photo sharing services. It takes image, text and user id as inputs and outputs
-top K recommendations.
+MaCon is a deep neural network model used to recommend hashtags for posts in photo sharing services (e.g., Instagram). It takes image, text, and user id as inputs and outputs top K tag recommendations.
 
-In this repository, we provide code implemented with Python Keras APIs
-and our dataset crawled from Instagram. These materials are also used in experiments
+In this repository, we provide the code of MaCon, as well as the dataset crawled from Instagram.These materials are also used in experiments
 reported in our AAAI paper.
 
 ### Details
@@ -40,8 +37,8 @@ All data needed in our model.
 
 - Data split:
 
-In this step, we will divide the data into train set, test set and user history sample set.
-Make sure that dataSplit.py and Instagram.data are under same dictionary.
+In this step, we will divide the data into training set, test set and user history sample set.
+Make sure that dataSplit.py and Instagram.data are under the same dictionary.
 Execute the python script:
 ```
 python dataSplit.py
@@ -49,7 +46,6 @@ python dataSplit.py
 - Image feature extraction:
 
 We extract feature vector of all images in this dataset with img_feature.py.
-Download the zip files and unpack them. Then execute:
 ```
 python img_feature.py
 ```
