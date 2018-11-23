@@ -45,7 +45,7 @@ python dataSplit.py
 ```
 - Image feature extraction:
 
-We extract feature vector of all images in this dataset with img_feature.py.
+We extract feature vector of all images in this dataset with *img_feature.py*.
 ```
 python img_feature.py
 ```
@@ -57,8 +57,8 @@ When data preparations are done, run Macon.py:
 ```
 python MaCon.py
 ```
-Evaluation metrics in training process are recorded in record_userHist_EMBED_NUMHIST.txt
-And model is stored in model_best_EMBED_NUMHIST.h5
+Evaluation metrics in training process are recorded in *record_userHist_EMBED_NUMHIST.txt*
+And model is stored in *model_best_EMBED_NUMHIST.h5*
 
 
 ### Requirements
